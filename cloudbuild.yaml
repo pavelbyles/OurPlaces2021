@@ -3,3 +3,6 @@ steps:
   args: [ 'build', '-t', 'gcr.io/ourplaces-dev-pav/ourplaces-dev-pav-image:$SHORT_SHA', '.' ]
 - name: 'gcr.io/cloud-builders/docker'
   args: [ 'push', 'gcr.io/ourplaces-dev-pav/ourplaces-dev-pav-image:$SHORT_SHA']
+
+options:
+ logging: CLOUD_LOGGING_ONLY
